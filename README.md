@@ -1,3 +1,3 @@
 ##Introduction 
-  All my projexts will be posted here.
+  All my projects will be posted here.
 
