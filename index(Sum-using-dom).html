@@ -1,0 +1,82 @@
+<html>
+    
+    <head>
+        <title>
+            Addition of Numbers
+        </title>
+        <style>
+            .container{
+                background-color: rgb(231, 255, 233);
+                color: #111130;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--Using Button--> 
+        <h1><u>Sum</u></h1>
+        <div>
+            <input id="1" type="text" placeholder="First Number" onkeypress="cursor_change(2)"></input>
+        </div>
+        <br/>
+        <div>
+            <input id="2" type="text" placeholder="Second Number"></input>
+        </div>
+        <br/>
+        <div>
+            <button onclick="f(1,2,3)">ADD</button>
+        </div>
+        <br/>
+        <div>
+            <p id="3" class="container"></p>
+        </div>
+
+        <br/>
+        <div>--------------------------</div>
+        <!--Without Using Button-->
+        <h1><u>Sum</u></h1>
+        <div>
+            <input id="4" type="text" placeholder="First Number" oninput="f1()" onkeypress="cursor_change(5)"></input>
+
+        </div>
+        <br/>
+        <div>
+            <input id="5" type="text" placeholder="Second Number" oninput="f1()"></input>
+        </div>
+        <br/>
+        <div>
+            <p id="6" class="container"></p>
+        </div>
+    </body>
+
+    <script>
+    //Button Function
+    function f(a,b,c)
+    {
+        let n1= document.getElementById(a).value
+        let n2= document.getElementById(b).value
+        n1= parseInt(n1)
+        n2= parseInt(n2)
+        let n= n1+n2
+        document.getElementById(c).innerHTML= (n)
+    }
+
+    //Without Button Function
+    function f1()
+    {
+        let n1= document.getElementById("4").value
+        let n2= document.getElementById("5").value
+        n1= parseInt(n1)
+        n2= parseInt(n2)
+        let n= n1+n2
+        document.getElementById("6").innerHTML= (n)
+    }
+
+    //Cursor to next text box Function
+    function cursor_change(b)
+    {
+        document.getElementById(b).focus()
+    }
+    </script>
+
+</html>
