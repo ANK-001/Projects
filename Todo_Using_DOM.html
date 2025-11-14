@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Todo
+        </title>
+    </head>
+ 
+      <script>
+        //Button Function
+        function f(a,b)
+        {
+            let n1= document.getElementById(1).value
+            let n2= document.getElementById(2).value
+
+            let my_div= document.createElement("div")
+            let t= document.createElement("div")
+            let d= document.createElement("div")
+            let bu=document.createElement("button")
+            
+            t.innerText= n1
+            d.innerText= n2
+            bu.innerText= "Mark as Done"
+            bu.style.backgroundColor= "#e85f5f"
+            bu.style.borderColor= "grey"
+
+            bu.addEventListener("click", () => {
+                bu.innerText= "Done"
+                bu.style.backgroundColor= "#cffd6b"
+                bu.style.borderColor= "grey"
+            })
+
+            my_div.appendChild(t)
+            my_div.appendChild(d)
+            my_div.appendChild(bu)
+
+            document.body.appendChild(my_div)
+        }
+
+        //Cursor to next text box Function
+        function cursor_change()
+        {
+            document.getElementById("2").focus()
+        }
+    </script>
+
+    <body>
+
+        <h1><u>Todos</u></h1>
+        <div>
+            <input id="1" type="text" placeholder="Title" onkeypress="cursor_change()"></input>
+        </div>
+        <br/>
+        <div>
+            <input id="2" type="text" placeholder="Description"></input>
+        </div>
+        <br/>
+        <div>
+            <button onclick="f()" style="background-color: #c2e5fa; border-color: grey;">Add Todo</button>
+        </div>
+       
+    </body>
+
+</html>
